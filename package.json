@@ -1,0 +1,20 @@
+{
+  "name": "auto-ant",
+  "version": "1.0.0",
+  "description": "Ant 指纹浏览器批量访问与拟人交互自动化工具",
+  "type": "module",
+  "main": "ant-batch-visit.mjs",
+  "scripts": {
+    "test": "node --test *.test.mjs"
+  },
+  "keywords": [
+    "ant-browser",
+    "cdp",
+    "automation",
+    "fingerprint"
+  ],
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "license": "ISC"
+}

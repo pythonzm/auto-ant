@@ -1,0 +1,9 @@
+# Temporary & reverse engineering analysis profiles/artifacts
+analysis/
+*.log
+2026*
+master-route*
+
+# Node / OS artifacts
+node_modules/
+.DS_Store
