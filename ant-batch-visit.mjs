@@ -313,10 +313,7 @@ async function visitTab(rec, cdp, u, tabIndex) {
         let navErr = '';
         ref = pickReferer(u, o.referer);
         const navParams = { url: u };
-        if (ref) {
-          navParams.referrer = ref;
-          try { await cdp.send('Network.setExtraHTTPHeaders', { headers: { 'Referer': ref } }); } catch { }
-        }
+        if (ref) navParams.referrer = ref;
         try { const nv = await cdp.send('Page.navigate', navParams); navErr = nv?.errorText || ''; } catch (e) { navErr = jerr(e); }
 
         // 先等加载，再额外停留（默认拟人交互），最后观察请求安静窗口。
